@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Inserindo vídeos com em HTML:5 de forma interna e externa com a tag <video>">
+    <meta name="keywords" content="Vídeos, tags, source, videos esterno, video interno, HTML5">
+    <meta name="author" content="Rodrigo Dias">
+    <link rel="shortcut icon" href="icone/favico-html.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Vídeos com HTML:5 Aprenda a adicionar videos com a tag vídeos de forma interna e externa ao seu site</title>
+</head>
+
+<body>
+    <header>
+        <H1>Inserindo vídeos hospedados localmente</H1>
+        <p>Este vídeos esta hospedado no meu próprio servidor</p>
+    </header>
+    <main>
+        <article>
+            <video width="560" poster="imagem/limoes-capa.png" controls loop>
+                <source src="midia/meu-video.mp4" type="video/mp4">
+                <source src="midia/meu-video.m4v" type="video/mp4">
+                <source src="midia/meu-video.webm" type="video/webm">
+                <source src="midia/meu-video.ogv" type="video/ogg">
+                <p>seu navegador não tem compatbilidade com reprodução de videos, baixe o video e assista localmente <a
+                        href="midia/meu-video.m4v" download="">NESTE LINCK</a></p>
+            </video>
+
+            <article>
+                <h1>Inserindo vídeo com YouTube</h1>
+                 <iframe width="560" height="315" src="https://www.youtube.com/embed/TZ7p1NXdRrc?si=6Kc-w1sVpWDKe_Mz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </article>
+
+            <article>
+                <h1>Inserindo vídeo com Vimeo</h1>
+                    <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/227796441?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Construção de Brasília em animação 3D - by Unloop"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+            </article>
+
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; Criado em 2026 - Por Rodrigo Dias para fins de estudos</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Este site tem por objetivo adicionar imagens flexiveis e dinamicas">
+    <meta name="keywords" content="HTML5, Mídias, tags, picture e source">
+    <meta name="authot" content="Rodrigo Dias">
+    <link rel="shortcut icon" href="icone/favico-html.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Mídia em HTMl:5 usanto as tags picture e source</title>
+</head>
+
+<body>
+    <header>
+        <H1>Imagens dinâmicas</H1>
+        <p>Tente abrir este site em varios dispositivos ou simplimente aumente e diminua o tamnho do seu navegador</p>
+    </header>
+    <main>
+        <article>
+            <picture>
+                <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+                <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+                <img src="imagens/foto-g.png" alt="Imagem flexivel">
+            </picture>
+        </article>
+
+        <article>
+            <h1>Reproduzindo Áudio</h1>
+            <p>Vamos aprender a repoduzir áudios em HTML5</p>
+            <audio controls preload="metadata"  controls loop>
+                <source src="midia/shintamochammad-emotional-sad-string-ensemble-486535.mp3" type="audio/mpeg">
+                <source src="midia/shintamochammad-emotional-sad-string-ensemble-486535.mp3" type="audio/ogg">
+                <source src="midia/shintamochammad-emotional-sad-string-ensemble-486535.mp3" type="audio/wav">
+                <p>Infelizmente seu navegador não consegue reproduzir áudio. <a href="midia/guanacast-33.mp3" download="midia/guanacast-33.mp3">Clique aqui para baixar o arquivo MP3</a></p>
+            </audio>
+        </article>
+
+    </main>
+
+    <footer>
+        <p>&copy; Criado em 2026 - por Rodrigo Dias para fins de estudo</p>
+    </footer>
+</body>
+
+</html>

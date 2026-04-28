@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+/*---- RESET ----*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 2.5;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+main {
+    background-color: white;
+    padding: 50px;
+    border-radius: 9px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+main img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+
+}
+
+footer {
+    text-align: center;
+}
+

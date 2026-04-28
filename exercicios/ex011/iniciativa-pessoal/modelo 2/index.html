@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Colocando imagens flexiveis e dinamicas usando as tags img picture e source">
+    <meta name="keywords" content="HTML5, Tags, pictures, source">
+    <meta name="althor" content="Rodrigo Dias">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="icone/favico-html.ico" type="image/x-icon">
+    <title>Imagem flexiveis com a tag SOURCE em HTML5</title>
+</head>
+
+<body>
+    <header>
+        <h1>Imagen flexivel</h1>
+        <p>Tente abrir este site em varios dispositivos diferentes ou simplesmente almente e diminua seu navegador.</p>
+    </header>
+    <main>
+        <img src="imagens/foto-m.png" srcset="imagens/foto-p.png 500w,
+          imagens/foto-m.png 1000w,
+          imagens/foto-g.png 1500w" sizes="(max-width: 600px) 480px,
+         800px" alt="Descrição do banner">
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Criado por Rodrigo Dias para fins de estudo</p>
+    </footer>
+</body>
+
+</html>

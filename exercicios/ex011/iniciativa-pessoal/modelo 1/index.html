@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aprenda a manipular imagens atraves das tags coretas">
+    <meta name="keywords" content="HTML5, tags, imagens, img, Desenvolvimento wab, SEO">
+    <meta name="author" content="Rodrigo Dias">
+    <link rel="shortcut icon" href="icone/favico-html.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Mídias em HTML5: Conceitos avansados de imagens e aldios</title>
+</head>
+
+<body>
+    <header>
+        <h1>Imagem dinâmica</h1>
+        <p>Tente abri esse site em vários dispositivos ou simplesmente aumente e diminua seu navegador.</p>
+    </header>
+    <main>
+        <article>
+            <picture>
+                <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+                <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+                <img src="imagens/foto-g.png" alt="Imagem flexivel">
+            </picture>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Criado por Rodrigo Dias para fins de estudos.</p>
+    </footer>
+</body>
+
+</html>
