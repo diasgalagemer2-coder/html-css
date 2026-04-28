@@ -1,0 +1,167 @@
+@charset "UTF-8";
+
+:root {
+    --primary: #3498db;
+    --secondary: #2c3e50;
+    --bg-page: #b2bec3; /* Cor de fundo da "rua" (fora do site) */
+    --site-width: #ffffff; /* Cor do corpo do site */
+    --text-color: #2f3640;
+    --font-header: 'Michroma', sans-serif;
+    --font-body: 'Montserrat', sans-serif;
+}
+
+/* RESET TOTAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-page);
+    display: flex;
+    justify-content: center; /* Centraliza o site horizontalmente */
+    padding: 20px 0; /* Espaço apenas no topo e base da tela */
+}
+
+/* O CORPO ÚNICO DO SITE */
+.site-wrapper {
+    width: 95%; /* Quase toda a tela no mobile */
+    max-width: 900px; /* Limite de largura no PC */
+    background-color: var(--site-width);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    border-radius: 15px; /* Bordas arredondadas apenas no container pai */
+    overflow: hidden; /* Garante que as seções internas não "saiam" das bordas */
+    display: flex;
+    flex-direction: column;
+}
+
+/* SEÇÕES SEM MARGENS PARA COLAR UMA NA OUTRA */
+.header-cabecalho, .footer {
+    /* 1. O fundo preto profundo */
+    background-color: #000000;
+
+    /* 2. Criando o brilho central e os "pontinhos prata" com gradientes */
+   background-image: 
+    /* Brilho central */
+    radial-gradient(circle at center, rgba(255, 255, 255, 0.2) 1%, transparent 70%),
+    
+    /* Pontinhos Prata: Usamos 1px para garantir que o navegador desenhe, 
+       mas usamos uma cor suave (rgba) para que pareçam pequenos e discretos */
+    radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+
+/* Ajuste o tamanho da repetição aqui (espaçamento entre os pontos) */
+background-size: 100% 100%, 25px 25px;
+    
+    position: relative;
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 2px solid transparent; /* Reserva espaço para a sua faixa dourada */
+}
+
+/* Reaplicando sua faixa dourada com ajuste de z-index */
+.header-cabecalho::after , 
+.hero::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: radial-gradient(circle at center, rgb(234 208 157) 0%, rgb(161 127 79) 70%), 
+                linear-gradient(to right, transparent, #816439 20%, #816439 80%, transparent);
+    box-shadow: 0px 0px 15px rgba(212, 175, 55, 0.6);
+    z-index: 5;
+}
+
+.header-cabecalho h1 {
+    font-family: var(--font-header);
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    color: #E8E6E1;
+}
+.header-cabecalho p {
+    font-family: var(--font-header);
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    color: #E8E6E1;
+}
+
+.hero {
+    background-color: white;
+    position: relative; /* Necessário para ancorar a faixa */
+    line-height: 0;     /* Remove espaços fantasmas abaixo da imagem */
+    margin-bottom: 0;   /* Garante que ela cole na próxima seção */
+}
+
+.hero img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+/* ÁREA DE CONTEÚDO (O MIOLO) */
+.content-area {
+    flex-grow: 1; /* Faz o miolo crescer se houver pouco conteúdo */
+}
+
+.box-cinza {
+    background-color: #D8D2C6; /* Tom cinza suave para a área de exercícios */
+    padding: 40px 20px;
+}
+
+.card-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.card-content h2, .card-content h3 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* LINKS ESTILIZADOS */
+.nav-list {
+    list-style: none;
+    margin-top: 25px;
+}
+
+.nav-list li {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: bold;
+    border: 1px solid var(--primary);
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.nav-list a:hover {
+    background-color: var(--primary);
+    color: white;
+}
+
+/* FOOTER FIXO NA BASE */
+.footer {
+    
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+.highlight {
+    color: var(--primary);
+}
+
+/* AJUSTE PARA TELAS GRANDES */
+@media screen and (min-width: 768px) {
+    body { padding: 15px 0; }
+    .header-cabecalho h1 { font-size: 2.5rem; }
+}

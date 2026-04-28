@@ -1,0 +1,153 @@
+@charset "UTF-8";
+
+/* 1. VARIÁVEIS (Nomes corrigidos e organizados) */
+:root {
+    --primary: #3498db;
+    --secondary: #2c3e50;
+    --bg-color: #f5f6fa;
+    --card-white: #ffffff;
+    --text-color: #2f3640;
+    --border-radius: 10px;
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+    /* Tipografia */
+    --font-header: 'Michroma', sans-serif;
+    --font-body: 'Montserrat', sans-serif;
+}
+
+/* 2. RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    line-height: 1.6;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding: 20px; /* Reduzido para mobile */
+}
+
+/* 3. CABEÇALHO */
+.header-cabecalho {
+    background-color: var(--secondary);
+    border-radius: var(--border-radius);
+    text-align: center;
+    color: white;
+    padding: 30px 15px;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow);
+}
+
+.header-cabecalho h1 {
+    font-family: var(--font-header);
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+/* 4. HERO SECTION */
+.hero {
+    background-color: var(--card-white);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    margin-bottom: 20px;
+    box-shadow: var(--shadow);
+}
+
+.hero img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* 5. COMPONENTE DE CARD (Reutilizável) */
+.card-container {
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+/* Cores específicas de cada página usando a mesma estrutura */
+.box-home { background-color: #D3D3D3; }
+.box-verde { background-color: #A6EB9A; }
+.box-amarelo { background-color: #FFFFE3; }
+
+.card-content {
+    padding: 25px;
+}
+
+.card-content h2, .card-content h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* 6. LISTAS E LINKS */
+.nav-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.nav-list li {
+    margin-bottom: 12px;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.nav-list a:hover {
+    color: var(--secondary);
+    padding-left: 5px; /* Efeito visual de movimento */
+}
+
+/* 7. FOOTER */
+.footer {
+    background-color: var(--secondary);
+    border-radius: var(--border-radius);
+    padding: 25px;
+    color: white;
+    text-align: center;
+}
+
+.footer-content {
+    font-size: 0.85rem;
+}
+
+.version-tag {
+    margin-top: 10px;
+    font-family: var(--font-header);
+    opacity: 0.8;
+}
+
+.highlight {
+    color: var(--primary);
+}
+
+/* 8. MEDIA QUERY (Telas Grandes) */
+@media screen and (min-width: 768px) {
+    body {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 40px;
+    }
+
+    .header-cabecalho h1 {
+        font-size: 2.2rem;
+    }
+    
+    .card-content {
+        padding: 40px;
+    }
+}
